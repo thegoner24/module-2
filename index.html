@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkpoint 1 - Module 2</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                accent: '#D8A016',
+              }
+              
+            }
+          }
+        }
+      </script>
+
+</head>
+<body class="font-sans antialiased bg-gray-100">
+
+    <header class="bg-black text-white fixed w-full z-50">
+        <div class="container mx-auto flex justify-between items-center px-6 py-4">
+            <img class="h-12" src="https://www.freepnglogos.com/uploads/lamborghini-logo-png/lamborghini-logo-meaning-and-history-lamborghini-symbol-4.png" alt="">
+            
+
+            <nav class="hidden md:flex space-x-8 text-md">
+                <a href="#hero" class="hover:text-gray-400">Home</a>
+                <a href="#asymmetrical" class="hover:text-gray-400">Asymmetrical</a>
+                <a href="#responsive-image" class="hover:text-gray-400">Responsive Image</a>
+                <a href="#animation-demo" class="hover:text-gray-400">Animation & Transition</a>
+                
+            </nav>
+    </header>
+
+
+
+<section id="hero" class="relative h-screen bg-cover bg-center" style="background-image: url('../assets/img/3840x2160.jpg');">
+    <div class="absolute inset-0 bg-black opacity-50"></div>
+    
+    <div class="relative h-full flex flex-col items-start justify-center text-white px-8 md:px-16">
+        <p class="text-sm uppercase mb-2 text-shadow text-accent">Feel The Luxury</p>
+        <h1 class="text-5xl md:text-7xl font-extrabold leading-tight text-accent text-shadow">Dare to Live More</h1>
+        <p class="text-base md:text-lg mt-4 max-w-md">
+            Experience the thrill and luxury of top-tier automotive performance with our exclusive collection.
+        </p>
+        <a href="#discover" class="mt-6 inline-block text-white bg-transparent border border-white rounded-full px-8 py-2 uppercase tracking-wider hover:bg-accent hover:text-white transition ease-in-out duration-300">
+            Discover More
+        </a>
+    </div>
+</section>
+
+    
+
+<section id="asymmetrical" class="py-16 bg-gray-50 w-full">
+    <div class="text-center px-6 mx-auto max-w-screen-xl">
+        <h2 class="text-3xl md:text-4xl font-bold mb-12">Asymmetrical Grid Layout</h2>
+        
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+            <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow flex flex-col items-center text-center lg:row-span-2">
+                <svg class="w-12 h-12 mb-4 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M64 208c0 7.8 4.4 18.7 17.1 30.3C126.5 214.1 188.9 200 256 200s129.5 14.1 174.9 38.3C443.6 226.7 448 215.8 448 208c0-12.3-10.8-32-47.9-50.6C364.9 139.8 314 128 256 128s-108.9 11.8-144.1 29.4C74.8 176 64 195.7 64 208zm192 40c-47 0-89.3 7.6-122.9 19.7C166.3 280.2 208.8 288 256 288s89.7-7.8 122.9-20.3C345.3 255.6 303 248 256 248zM0 208c0-49.6 39.4-85.8 83.3-107.8C129.1 77.3 190.3 64 256 64s126.9 13.3 172.7 36.2c43.9 22 83.3 58.2 83.3 107.8l0 96c0 49.6-39.4 85.8-83.3 107.8C382.9 434.7 321.7 448 256 448s-126.9-13.3-172.7-36.2C39.4 389.8 0 353.6 0 304l0-96z"/></svg>
+                <h3 class="text-xl font-semibold mb-2">Brand Identity</h3>
+                <p class="text-gray-600">
+                    We create unique and powerful brand identities that help companies achieve their goals and stand out amongst the competition.
+                </p>
+            </div>
+            
+
+            <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow flex flex-col items-center text-center">
+                <svg  class="w-12 h-12 mb-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M495.9 166.6c3.2 8.7 .5 18.4-6.4 24.6l-43.3 39.4c1.1 8.3 1.7 16.8 1.7 25.4s-.6 17.1-1.7 25.4l43.3 39.4c6.9 6.2 9.6 15.9 6.4 24.6c-4.4 11.9-9.7 23.3-15.8 34.3l-4.7 8.1c-6.6 11-14 21.4-22.1 31.2c-5.9 7.2-15.7 9.6-24.5 6.8l-55.7-17.7c-13.4 10.3-28.2 18.9-44 25.4l-12.5 57.1c-2 9.1-9 16.3-18.2 17.8c-13.8 2.3-28 3.5-42.5 3.5s-28.7-1.2-42.5-3.5c-9.2-1.5-16.2-8.7-18.2-17.8l-12.5-57.1c-15.8-6.5-30.6-15.1-44-25.4L83.1 425.9c-8.8 2.8-18.6 .3-24.5-6.8c-8.1-9.8-15.5-20.2-22.1-31.2l-4.7-8.1c-6.1-11-11.4-22.4-15.8-34.3c-3.2-8.7-.5-18.4 6.4-24.6l43.3-39.4C64.6 273.1 64 264.6 64 256s.6-17.1 1.7-25.4L22.4 191.2c-6.9-6.2-9.6-15.9-6.4-24.6c4.4-11.9 9.7-23.3 15.8-34.3l4.7-8.1c6.6-11 14-21.4 22.1-31.2c5.9-7.2 15.7-9.6 24.5-6.8l55.7 17.7c13.4-10.3 28.2-18.9 44-25.4l12.5-57.1c2-9.1 9-16.3 18.2-17.8C227.3 1.2 241.5 0 256 0s28.7 1.2 42.5 3.5c9.2 1.5 16.2 8.7 18.2 17.8l12.5 57.1c15.8 6.5 30.6 15.1 44 25.4l55.7-17.7c8.8-2.8 18.6-.3 24.5 6.8c8.1 9.8 15.5 20.2 22.1 31.2l4.7 8.1c6.1 11 11.4 22.4 15.8 34.3zM256 336a80 80 0 1 0 0-160 80 80 0 1 0 0 160z"/></svg>
+                <h3 class="text-xl font-semibold mb-2">Maintenance</h3>
+                <p class="text-gray-600">
+                    We help companies craft captivating websites. Our designs tell stories and guide users, from vision to action.
+                </p>
+            </div>
+            
+ 
+            <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow flex flex-col items-center text-center">
+                <svg  class="w-12 h-12 mb-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M465 7c-8.5-8.5-22-9.4-31.6-2.1l-104 80c-5.9 4.5-9.4 11.6-9.4 19l0 54.1-85.6 85.6c6.7 4.2 13 9.3 18.8 15.1s10.9 12.2 15.1 18.8L353.9 192l54.1 0c7.5 0 14.5-3.5 19-9.4l80-104c7.4-9.6 6.5-23.1-2.1-31.6L465 7zM121.4 281.4l-112 112c-12.5 12.5-12.5 32.8 0 45.3l64 64c12.5 12.5 32.8 12.5 45.3 0l112-112c30.2-30.2 30.2-79.1 0-109.3s-79.1-30.2-109.3 0z"/></svg>
+                <h3 class="text-xl font-semibold mb-2">Tuning</h3>
+                <p class="text-gray-600">
+                    We design mobile and responsive web experiences, allowing users to interact with apps in a way that feels effortless.
+                </p>
+            </div>
+            
+
+            <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow flex flex-col items-center text-center sm:col-span-2">
+                <svg class="w-12 h-12 mb-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M469.3 19.3l23.4 23.4c25 25 25 65.5 0 90.5l-56.4 56.4L322.3 75.7l56.4-56.4c25-25 65.5-25 90.5 0zM44.9 353.2L299.7 98.3 413.7 212.3 158.8 467.1c-6.7 6.7-15.1 11.6-24.2 14.2l-104 29.7c-8.4 2.4-17.4 .1-23.6-6.1s-8.5-15.2-6.1-23.6l29.7-104c2.6-9.2 7.5-17.5 14.2-24.2zM249.4 103.4L103.4 249.4 16 161.9c-18.7-18.7-18.7-49.1 0-67.9L94.1 16c18.7-18.7 49.1-18.7 67.9 0l19.8 19.8c-.3 .3-.7 .6-1 .9l-64 64c-6.2 6.2-6.2 16.4 0 22.6s16.4 6.2 22.6 0l64-64c.3-.3 .6-.7 .9-1l45.1 45.1zM408.6 262.6l45.1 45.1c-.3 .3-.7 .6-1 .9l-64 64c-6.2 6.2-6.2 16.4 0 22.6s16.4 6.2 22.6 0l64-64c.3-.3 .6-.7 .9-1L496 350.1c18.7 18.7 18.7 49.1 0 67.9L417.9 496c-18.7 18.7-49.1 18.7-67.9 0l-87.4-87.4L408.6 262.6z"/></svg>
+                <h3 class="text-xl font-semibold mb-2">Custom</h3>
+                <p class="text-gray-600">
+                    We create visual stories that help explain your mission and vision.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+            
+    
+    
+
+
+<section id="featured" class="py-12 bg-gray-100">
+    <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold mb-8 text-center">Asymmetrical Grid Layout</h2>
+        
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+ 
+            <div class="col-span-1 md:col-span-2 md:row-span-2 h-64 sm:h-80 md:h-96 rounded-lg shadow-md overflow-hidden">
+                <img src="https://c4.wallpaperflare.com/wallpaper/279/776/836/lamborghini-sc18-supercar-2018-cars-4k-wallpaper-preview.jpg" alt="Car 1" class="w-full h-full object-cover">
+            </div>
+                        <div class="col-span-1 h-64 sm:h-64 md:h-48 rounded-lg shadow-md overflow-hidden">
+                <img src="https://backiee.com/static/wallpapers/560x315/274999.jpg" alt="Car 2" class="w-full h-full object-cover">
+            </div>
+            
+            <div class="col-span-1 h-64 sm:h-40 md:h-48 rounded-lg shadow-md overflow-hidden">
+                <img src="https://webneel.com/wallpaper/sites/default/files/images/07-2013/4%20lamborghini%20car%20wallpaper.jpg" alt="Car 3" class="w-full h-full object-cover">
+            </div>
+            
+            <div class="col-span-1 md:col-span-2 h-64 sm:h-36 md:h-44 rounded-lg shadow-md overflow-hidden">
+                <img src="https://webneel.com/wallpaper/sites/default/files/images/07-2013/6%20lamborghini%20car%20wallpaper.jpg" alt="Car 4" class="w-full h-full object-cover">
+            </div>
+        </div>
+    </div>
+</section>
+
+    
+
+
+
+<section id="responsive-image" class="py-16 bg-white w-full">
+    <div class="container mx-auto px-6 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold mb-6">Responsive Design Picture</h2>
+        <p class="text-lg text-gray-600 mb-8">
+            See how responsive images adapt to different screen sizes and resolutions for optimal performance.
+        </p>
+
+
+        <div class="w-full max-w-4xl mx-auto">
+            <picture>
+                <source srcset="../assets/img/3840x2160.jpg" media="(min-width: 1024px)">
+
+                <source srcset="https://c4.wallpaperflare.com/wallpaper/224/87/733/lamborghini-aventador-wallpaper-preview.jpg" media="(min-width: 768px) and (max-width: 1023px)">
+
+                <source srcset="https://png.pngtree.com/thumb_back/fh260/background/20230704/pngtree-spectacular-3d-render-of-lamborghini-veneno-image_3706299.jpg" media="(max-width: 425px)">
+                
+                <img src="https://i.pinimg.com/originals/4d/4a/64/4d4a643b7595b4d49b9fffced62b4a30.jpg" alt="Responsive Design Example" class="w-full h-auto rounded-lg shadow-md">
+            </picture>
+        </div>
+    </div>
+</section>
+
+
+<section id="animation-demo" class="py-16 bg-gray-100 w-full">
+    <div class="container mx-auto px-6 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold mb-8">This is animation section</h2>
+        <p class="text-lg text-gray-600 mb-12">
+            Two basic animation methods: using keyframes and using transition on hover.
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg flex flex-col items-center">
+                <h3 class="text-xl font-semibold mb-4">Keyframe Animation</h3>
+                <div class="w-24 h-24 bg-blue-500 rounded-full animate-bounce-animation"></div>
+                <p class="text-gray-600 mt-4">
+                    This box uses keyframes to create a bouncing effect.
+                </p>
+            </div>
+
+
+            <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg flex flex-col items-center">
+                <h3 class="text-xl font-semibold mb-4">Transition on Hover</h3>
+                <div class="w-24 h-24 bg-green-500 rounded-full transition-all duration-500 ease-in-out transform hover:scale-110 hover:bg-green-700"></div>
+                <p class="text-gray-600 mt-4">
+                    This box grows and changes color on hover using transition.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<footer class="bg-black text-gray-300 py-10">
+    <div class="container mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+            <div>
+
+                <div class="flex items-center space-x-2 mb-4">
+                    <div class="w-6 h-6 bg-accent rounded-full"></div>
+                    <h2 class="text-2xl font-bold text-white">Lamborghini</h2>
+                </div>
+                <p class="text-gray-400">
+                A result for my assignment
+                </p>
+            </div>
+
+            <div>
+                <h3 class="text-lg font-semibold mb-4 text-white">Company</h3>
+                <ul class="space-y-2">
+                    <li><a href="#hero" class="hover:text-white transition"><i class="fa-solid fa-house mr-2"></i>Home</a></li>
+                    <li><a href="#asymmetrical" class="hover:text-white transition gap-4"><i class="fa-solid fa-table-columns mr-2"></i>Asymmetrical</a></li>
+                    <li><a href="#responsive-image" class="hover:text-white transition"><i class="fa-solid fa-atom mr-2"></i>Responsive Image</a></li>
+                    <li><a href="#animation-demo" class="hover:text-white transition"><i class="fa-solid fa-wand-magic-sparkles mr-2"></i>Animation & Transition</a></li>
+                </ul>
+            </div>
+
+
+        <div class="flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
+            <p>© 2024 Guntur. All rights reserved.</p>
+
+        </div>
+    </div>
+</footer>
+
+
+</body>
+</html>
