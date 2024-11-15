@@ -93,26 +93,16 @@ Netlify automatically enables auto deployment after linking your GitHub reposito
 
 ## Step 4: Connect a Custom Domain (Optional)
 
-1. In your site dashboard, go to the **Domain settings** section.
+1. In your site dashboard, go to the **Domain settings** section. In this case i'm using **Niagahoster**
 2. Click **Add Custom Domain**.
-3. Enter your custom domain name (e.g., `example.com`) and click **Verify**.
+3. Enter your custom domain name and click **Verify**.
 4. Update your domain's DNS settings:
    - Add a CNAME record pointing your domain to `your-site-name.netlify.app`.
    - Alternatively, use the DNS settings provided by Netlify.
 5. Wait for DNS propagation (usually a few minutes to a few hours).
 6. Once verified, your custom domain will be live!
 
----
 
-## Additional Tips
-
-- Use the **Netlify CLI** for more advanced deployment options.
-- Monitor your build logs in the **Deploys** tab if any issues arise.
-- Secure your site with an SSL certificate provided by Netlify for free.
-
----
-
-Congratulations! Your website is now live on Netlify. 🎉
 
 ## Full Deployment
 
