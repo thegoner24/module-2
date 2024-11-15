@@ -15,6 +15,7 @@ This is a simple and responsive website built with HTML, CSS and Tailwind.
 - HTML5
 - CSS
 - Tailwind
+- Javascript
 
 ## Setup
 
