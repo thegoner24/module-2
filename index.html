@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
 
     <script src="https://cdn.tailwindcss.com"></script>
@@ -29,7 +29,7 @@
       </script>
 
 </head>
-<body class="font-sans antialiased bg-gray-100">
+<body class="font-sans antialiased">
 
     <header class="bg-black text-white fixed w-full z-50">
         <div class="container mx-auto flex justify-between items-center px-6 py-4">
@@ -41,10 +41,12 @@
                 <a href="#asymmetrical" class="hover:text-gray-400">Asymmetrical</a>
                 <a href="#responsive-image" class="hover:text-gray-400">Responsive Image</a>
                 <a href="#animation-demo" class="hover:text-gray-400">Animation & Transition</a>
-                
             </nav>
+            <button id="dark-mode-toggle" class="toggle-button">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+            <script src="script.js"></script>
     </header>
-
 
 
 <section id="hero" class="relative h-screen bg-cover bg-center" style="background-image: url(assets/img/3840x2160.jpg);">
@@ -64,14 +66,14 @@
 
     
 
-<section id="asymmetrical" class="py-16 bg-gray-50 w-full">
+<section id="asymmetrical" class="py-16  w-full">
     <div class="text-center px-6 mx-auto max-w-screen-xl">
         <h2 class="text-3xl md:text-4xl font-bold mb-12">Asymmetrical Grid Layout</h2>
         
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
-            <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow flex flex-col items-center text-center lg:row-span-2">
+            <div class="bg-accent p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow flex flex-col items-center text-center lg:row-span-2">
                 <svg class="w-12 h-12 mb-4 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M64 208c0 7.8 4.4 18.7 17.1 30.3C126.5 214.1 188.9 200 256 200s129.5 14.1 174.9 38.3C443.6 226.7 448 215.8 448 208c0-12.3-10.8-32-47.9-50.6C364.9 139.8 314 128 256 128s-108.9 11.8-144.1 29.4C74.8 176 64 195.7 64 208zm192 40c-47 0-89.3 7.6-122.9 19.7C166.3 280.2 208.8 288 256 288s89.7-7.8 122.9-20.3C345.3 255.6 303 248 256 248zM0 208c0-49.6 39.4-85.8 83.3-107.8C129.1 77.3 190.3 64 256 64s126.9 13.3 172.7 36.2c43.9 22 83.3 58.2 83.3 107.8l0 96c0 49.6-39.4 85.8-83.3 107.8C382.9 434.7 321.7 448 256 448s-126.9-13.3-172.7-36.2C39.4 389.8 0 353.6 0 304l0-96z"/></svg>
                 <h3 class="text-xl font-semibold mb-2">Brand Identity</h3>
                 <p class="text-gray-600">
@@ -80,7 +82,7 @@
             </div>
             
 
-            <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow flex flex-col items-center text-center">
+            <div class="bg-accent p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow flex flex-col items-center text-center">
                 <svg  class="w-12 h-12 mb-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M495.9 166.6c3.2 8.7 .5 18.4-6.4 24.6l-43.3 39.4c1.1 8.3 1.7 16.8 1.7 25.4s-.6 17.1-1.7 25.4l43.3 39.4c6.9 6.2 9.6 15.9 6.4 24.6c-4.4 11.9-9.7 23.3-15.8 34.3l-4.7 8.1c-6.6 11-14 21.4-22.1 31.2c-5.9 7.2-15.7 9.6-24.5 6.8l-55.7-17.7c-13.4 10.3-28.2 18.9-44 25.4l-12.5 57.1c-2 9.1-9 16.3-18.2 17.8c-13.8 2.3-28 3.5-42.5 3.5s-28.7-1.2-42.5-3.5c-9.2-1.5-16.2-8.7-18.2-17.8l-12.5-57.1c-15.8-6.5-30.6-15.1-44-25.4L83.1 425.9c-8.8 2.8-18.6 .3-24.5-6.8c-8.1-9.8-15.5-20.2-22.1-31.2l-4.7-8.1c-6.1-11-11.4-22.4-15.8-34.3c-3.2-8.7-.5-18.4 6.4-24.6l43.3-39.4C64.6 273.1 64 264.6 64 256s.6-17.1 1.7-25.4L22.4 191.2c-6.9-6.2-9.6-15.9-6.4-24.6c4.4-11.9 9.7-23.3 15.8-34.3l4.7-8.1c6.6-11 14-21.4 22.1-31.2c5.9-7.2 15.7-9.6 24.5-6.8l55.7 17.7c13.4-10.3 28.2-18.9 44-25.4l12.5-57.1c2-9.1 9-16.3 18.2-17.8C227.3 1.2 241.5 0 256 0s28.7 1.2 42.5 3.5c9.2 1.5 16.2 8.7 18.2 17.8l12.5 57.1c15.8 6.5 30.6 15.1 44 25.4l55.7-17.7c8.8-2.8 18.6-.3 24.5 6.8c8.1 9.8 15.5 20.2 22.1 31.2l4.7 8.1c6.1 11 11.4 22.4 15.8 34.3zM256 336a80 80 0 1 0 0-160 80 80 0 1 0 0 160z"/></svg>
                 <h3 class="text-xl font-semibold mb-2">Maintenance</h3>
                 <p class="text-gray-600">
@@ -89,7 +91,7 @@
             </div>
             
  
-            <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow flex flex-col items-center text-center">
+            <div class="bg-accent rounded-xl shadow-md hover:shadow-lg transition-shadow flex flex-col items-center text-center">
                 <svg  class="w-12 h-12 mb-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M465 7c-8.5-8.5-22-9.4-31.6-2.1l-104 80c-5.9 4.5-9.4 11.6-9.4 19l0 54.1-85.6 85.6c6.7 4.2 13 9.3 18.8 15.1s10.9 12.2 15.1 18.8L353.9 192l54.1 0c7.5 0 14.5-3.5 19-9.4l80-104c7.4-9.6 6.5-23.1-2.1-31.6L465 7zM121.4 281.4l-112 112c-12.5 12.5-12.5 32.8 0 45.3l64 64c12.5 12.5 32.8 12.5 45.3 0l112-112c30.2-30.2 30.2-79.1 0-109.3s-79.1-30.2-109.3 0z"/></svg>
                 <h3 class="text-xl font-semibold mb-2">Tuning</h3>
                 <p class="text-gray-600">
@@ -98,7 +100,7 @@
             </div>
             
 
-            <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow flex flex-col items-center text-center sm:col-span-2">
+            <div class="bg-accent rounded-xl shadow-md hover:shadow-lg transition-shadow flex flex-col items-center text-center sm:col-span-2">
                 <svg class="w-12 h-12 mb-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M469.3 19.3l23.4 23.4c25 25 25 65.5 0 90.5l-56.4 56.4L322.3 75.7l56.4-56.4c25-25 65.5-25 90.5 0zM44.9 353.2L299.7 98.3 413.7 212.3 158.8 467.1c-6.7 6.7-15.1 11.6-24.2 14.2l-104 29.7c-8.4 2.4-17.4 .1-23.6-6.1s-8.5-15.2-6.1-23.6l29.7-104c2.6-9.2 7.5-17.5 14.2-24.2zM249.4 103.4L103.4 249.4 16 161.9c-18.7-18.7-18.7-49.1 0-67.9L94.1 16c18.7-18.7 49.1-18.7 67.9 0l19.8 19.8c-.3 .3-.7 .6-1 .9l-64 64c-6.2 6.2-6.2 16.4 0 22.6s16.4 6.2 22.6 0l64-64c.3-.3 .6-.7 .9-1l45.1 45.1zM408.6 262.6l45.1 45.1c-.3 .3-.7 .6-1 .9l-64 64c-6.2 6.2-6.2 16.4 0 22.6s16.4 6.2 22.6 0l64-64c.3-.3 .6-.7 .9-1L496 350.1c18.7 18.7 18.7 49.1 0 67.9L417.9 496c-18.7 18.7-49.1 18.7-67.9 0l-87.4-87.4L408.6 262.6z"/></svg>
                 <h3 class="text-xl font-semibold mb-2">Custom</h3>
                 <p class="text-gray-600">
@@ -114,7 +116,7 @@
     
 
 
-<section id="featured" class="py-12 bg-gray-100">
+<section id="featured" class="py-12">
     <div class="container mx-auto px-6">
         <h2 class="text-3xl font-bold mb-8 text-center">Asymmetrical Grid Layout</h2>
         
@@ -140,10 +142,82 @@
 </section>
 
     
+<section id="carousel" class="py-16">
+    <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold mb-8 text-center">Luxury Car Collection</h2>
+
+        <!-- Carousel -->
+        <div id="carouselExample" class="relative" data-te-carousel-init data-te-carousel-slide>
+            <div class="absolute bottom-0 left-1/2 transform -translate-x-1/2 z-10 mb-4">
+                <button
+                    class="carousel-indicator w-4 h-4 rounded-full bg-white mx-1"
+                    data-te-target="#carouselExample"
+                    data-te-slide-to="0"
+                    data-te-carousel-active="true"
+                ></button>
+                <button
+                    class="carousel-indicator w-4 h-4 rounded-full bg-white mx-1"
+                    data-te-target="#carouselExample"
+                    data-te-slide-to="1"
+                ></button>
+                <button
+                    class="carousel-indicator w-4 h-4 rounded-full bg-white mx-1"
+                    data-te-target="#carouselExample"
+                    data-te-slide-to="2"
+                ></button>
+            </div>
+
+            <div class="relative overflow-hidden">
+                <div
+                    class="carousel-inner relative w-full flex transition-transform duration-700 ease-in-out"
+                >
+                    <div class="carousel-item w-full flex justify-center">
+                        <img
+                            src="https://www.lamborghini.com/sites/it-en/files/DAM/lamborghini/facelift_2019/motorsport/cars/sc20/sc20_og.jpg"
+                            class="w-full h-80 sm:h-96 object-cover"
+                            alt="Car 1"
+                        />
+                    </div>
+                    <div class="carousel-item w-full flex justify-center">
+                        <img
+                            src="https://www.lamborghini.com/sites/it-en/files/DAM/lamborghini/facelift_2019/motorsport/cars/sc20/s/sc20_s_01_m.jpg"
+                            class="w-full h-80 sm:h-96 object-cover"
+                            alt="Car 2"
+                        />
+                    </div>
+                    <div class="carousel-item w-full flex justify-center">
+                        <img
+                            src="https://www.lamborghini.com/sites/it-en/files/DAM/lamborghini/facelift_2019/motorsport/cars/sc20/s/sc20_s_03_m.jpg"
+                            class="w-full h-80 sm:h-96 object-cover"
+                            alt="Car 3"
+                        />
+                    </div>
+                </div>
+            </div>
+
+<button
+    class="carousel-control-prev absolute top-1/2 left-0 z-10 flex items-center justify-center p-2 bg-black text-white rounded-full"
+    type="button"
+    data-te-target="#carouselExample"
+    data-te-slide="prev">
+    <span class="fas fa-chevron-left text-white text-2xl"></span>
+</button>
+<button
+    class="carousel-control-next absolute top-1/2 right-0 z-10 flex items-center justify-center p-2 bg-black text-white rounded-full"
+    type="button"
+    data-te-target="#carouselExample"
+    data-te-slide="next"
+>
+    <span class="fas fa-chevron-right text-white text-2xl"></span>
+</button>
+
+        </div>
+    </div>
+</section>
 
 
 
-<section id="responsive-image" class="py-16 bg-white w-full">
+<section id="responsive-image" class="py-16 w-full">
     <div class="container mx-auto px-6 text-center">
         <h2 class="text-3xl md:text-4xl font-bold mb-6">Responsive Design Picture</h2>
         <p class="text-lg text-gray-600 mb-8">
@@ -166,7 +240,7 @@
 </section>
 
 
-<section id="animation-demo" class="py-16 bg-gray-100 w-full">
+<section id="animation-demo" class="py-16 w-full">
     <div class="container mx-auto px-6 text-center">
         <h2 class="text-3xl md:text-4xl font-bold mb-8">This is animation section</h2>
         <p class="text-lg text-gray-600 mb-12">
@@ -174,7 +248,7 @@
         </p>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-            <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg flex flex-col items-center">
+            <div class="bg-accent p-8 rounded-lg shadow-md hover:shadow-lg flex flex-col items-center">
                 <h3 class="text-xl font-semibold mb-4">Keyframe Animation</h3>
                 <div class="w-24 h-24 bg-blue-500 rounded-full animate-bounce-animation"></div>
                 <p class="text-gray-600 mt-4">
@@ -183,7 +257,7 @@
             </div>
 
 
-            <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg flex flex-col items-center">
+            <div class="bg-accent p-8 rounded-lg shadow-md hover:shadow-lg flex flex-col items-center">
                 <h3 class="text-xl font-semibold mb-4">Transition on Hover</h3>
                 <div class="w-24 h-24 bg-green-500 rounded-full transition-all duration-500 ease-in-out transform hover:scale-110 hover:bg-green-700"></div>
                 <p class="text-gray-600 mt-4">
@@ -227,6 +301,34 @@
         </div>
     </div>
 </footer>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const prevBtn = document.querySelector('.carousel-control-prev');
+        const nextBtn = document.querySelector('.carousel-control-next');
+        const carouselItems = document.querySelectorAll('.carousel-item');
+        let currentIndex = 0;
+
+        function updateCarousel() {
+            carouselItems.forEach(item => {
+                item.classList.add('hidden');
+            });
+
+            carouselItems[currentIndex].classList.remove('hidden');
+        }
+
+        prevBtn.addEventListener('click', function () {
+            currentIndex = (currentIndex === 0) ? carouselItems.length - 1 : currentIndex - 1;
+            updateCarousel();
+        });
+
+        nextBtn.addEventListener('click', function () {
+            currentIndex = (currentIndex === carouselItems.length - 1) ? 0 : currentIndex + 1;
+            updateCarousel();
+        });
+
+        updateCarousel();
+    });
+</script>
 
 
 </body>
